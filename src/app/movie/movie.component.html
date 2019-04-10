@@ -1,0 +1,31 @@
+<p>
+  movie works!
+</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Language</th>
+    <th>Movie Name</th>
+    <th>Production House</th>
+    <th>Rating</th>
+    <th>Type</th>
+    <th>Year</th>
+    <th>Image</th>
+    <th>Delete</th>
+    <th>Edit</th>
+  </tr>
+  <tr *ngFor="let p of list">
+    <td>{{p.id}}</td>
+    <td>{{p.language}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.production_house}}</td>
+    <td>{{p.rating}}</td>
+    <td>{{p.type}}</td>
+    <td>{{p.year}}</td>
+    <td width="10%"><img width="10%" src="{{p.image_url}}"></td>
+    <td><input type="button" value="Delete" (click)="deleteMovie(p.id)"></td>
+    <td><input type="button" value="Edit" (click)="editMovie()"></td>
+  </tr>
+</table>
+
+
